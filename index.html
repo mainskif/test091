@@ -1,0 +1,39 @@
+<html>
+<head>
+<script language = 'javascript'>
+  function startTime() {
+var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+	var day = date.getDate();
+var date2 =new Date(0, 6, 11, 11, 59, 59);
+	date2.setYear(2013);
+	var hours2 = date2.getHours();
+	var minutes2 = date2.getMinutes();
+	var seconds2 = date2.getSeconds();
+	var day2 = date2.getDate();
+	
+	
+var diff = date2 -date ;
+	diff = diff / 1000;
+seconds3 = diff % 60;
+	diff = diff / 60;
+minutes3 = diff % 60;
+	diff = diff / 60;
+hours3 = diff % 24;
+	diff = diff / 24;
+day3 = diff;
+	seconds3 = seconds3.toFixed();
+	minutes3 = minutes3.toFixed();
+	hours3 = hours3.toFixed();
+	day3 = day3.toFixed();
+    document.getElementById("time").innerHTML = day3+ " " + hours3 +" "+ minutes3 +" "+ seconds3;
+    setTimeout(startTime, 1000);
+  }
+</script>
+</head>
+<body onLoad = 'startTime()'>
+  <b>осталось: <span id="time"></span></b>
+</body>
+</html>
