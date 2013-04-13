@@ -16,7 +16,7 @@ var date2 =new Date(0, 6, 11, 11, 59, 59);
 	var day2 = date2.getDate();
 	
 	
-var diff = date2 -date ;
+var diff = date2 - date;
 	diff = diff / 1000;
 seconds3 = diff % 60;
 	diff = diff / 60;
@@ -25,16 +25,16 @@ minutes3 = diff % 60;
 hours3 = diff % 24;
 	diff = diff / 24;
 day3 = diff;
-	seconds3 = seconds3.toFixed();
-	minutes3 = minutes3.toFixed();
-	hours3 = hours3.toFixed();
-	day3 = day3.toFixed();
+    seconds3 = seconds3|0;
+	minutes3 = minutes3|0;
+	hours3 = hours3|0;
+	day3 = day3|0;
     document.getElementById("time").innerHTML = day3+ " " + hours3 +" "+ minutes3 +" "+ seconds3;
     setTimeout(startTime, 1000);
   }
 </script>
 </head>
 <body onLoad = 'startTime()'>
-  <b>осталось: <span id="time"></span></b>
+  <b> РћСЃС‚Р°Р»РѕСЃСЊ: <span id="time"></span></b>
 </body>
 </html>
